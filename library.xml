@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="library.xsl"?>
+<home>
+    <section category="Technology">
+        <book isNew="true">
+            <title>Learning Java</title>
+            <author>Loy, Niemeyer and Leuck</author>
+            <publishing-year>2020</publishing-year>
+            <edition>5th Edition</edition>
+            <editor-house>O'Reilly</editor-house>
+            <isbn>123456789</isbn>
+            <price>20.00</price>
+        </book>
+        <book isNew = "false">
+            <title>Linux Command Line and Shell Scripting</title>
+            <author>Richard Blum, Christine Bresnahan</author>
+            <publishing-year>2019</publishing-year>
+            <edition>3rd Edition</edition>
+            <editor-house>Willey</editor-house>
+            <isbn>123456456</isbn>
+            <price>30.00</price>
+        </book>
+    </section>
+    <section category="Business">
+        <book isNew = "true">
+            <title>Smarter, Faster, Better: The secret of productivity</title>
+            <author>Charles Dugigg</author>
+            <publishing-year>2016</publishing-year>
+            <edition>1st Edition</edition>
+            <editor-house>Business Book</editor-house>
+            <isbn>12385247</isbn>
+            <price>40.00</price>
+        </book>
+        <book isNew = "false">
+            <title>Dare to Lead</title>
+            <author>Brené Brown</author>
+            <publishing-year>2018</publishing-year>
+            <edition>2nd Edition</edition>
+            <editor-house>Vermilion</editor-house>
+            <isbn>1239654782</isbn>
+            <price>50.00</price>
+        </book>
+    </section>
+</home>
