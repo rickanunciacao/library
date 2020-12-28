@@ -91,7 +91,7 @@
                         <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input">
+                                <input type="checkbox" id="newBook" aria-label="Checkbox for following text input">
                             </div>
                         </div>
                         <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill"
@@ -134,8 +134,8 @@
             document.querySelector("#calcBill").addEventListener("click", function() {
                 document.forms[1].txtBillAmt.value = calculateBill('bookList');
             });
-            document.querySelector("#showVeg").addEventListener("click", function() {
-                highlightVegetarian('bookList', this.checked);
+            document.querySelector("#newBook").addEventListener("click", function() { 
+                highlightNewBooks('bookList', this.checked);
             });
         });
     </script>

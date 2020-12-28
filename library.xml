@@ -10,7 +10,7 @@
       <isbn>123456789</isbn>
       <price>20.00</price>
     </book>
-    <book isNew="false">
+    <book>
       <title>Linux Command Line and Shell Scripting</title>
       <author>Richard Blum, Christine Bresnahan</author>
       <publishingYear>2019</publishingYear>
@@ -30,7 +30,7 @@
       <isbn>12385247</isbn>
       <price>40.00</price>
     </book>
-    <book isNew="false">
+    <book>
       <title>Dare to Lead</title>
       <author>Brené Brown</author>
       <publishingYear>2018</publishingYear>
@@ -38,15 +38,6 @@
       <editorHouse>Vermilion</editorHouse>
       <isbn>1239654782</isbn>
       <price>50.00</price>
-    </book>
-    <book>
-      <title>Rick</title>
-      <author>Rick again</author>
-      <publishingYear>2021</publishingYear>
-      <edition>1st</edition>
-      <editorHouse>Me</editorHouse>
-      <isbn>kakakaka</isbn>
-      <price>800</price>
     </book>
   </section>
 </home>

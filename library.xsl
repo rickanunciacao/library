@@ -30,6 +30,7 @@
                             <xsl:attribute name="isNew">
                                 <xsl:value-of select="boolean(@isNew)" />
                             </xsl:attribute>
+
                             <td align="center">
                                 <input name="item0" type="checkbox" />
                             </td>
@@ -40,13 +41,13 @@
                                 <xsl:value-of select="author" />
                             </td>
                             <td>
-                                <xsl:value-of select="publishing-year" />
+                                <xsl:value-of select="publishingYear" />
                             </td>
                             <td>
                                 <xsl:value-of select="edition" />
                             </td>
                             <td>
-                                <xsl:value-of select="editor-house" />
+                                <xsl:value-of select="editorHouse" />
                             </td>
                             <td>
                                 <xsl:value-of select="isbn" />
