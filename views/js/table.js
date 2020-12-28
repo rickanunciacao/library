@@ -1,3 +1,6 @@
+
+// AJAX request to the endpoint "/get/html" and renders to the screen appending the html table into the div "#results" and triggers another function select_row().
+
 function draw_table()
 {
 	$("#results").empty();
@@ -18,21 +21,25 @@ function draw_table()
 	$.getJSONuncached("/get/html")
 };
 
-function select_row()
+
+
+// this is a function that allows us to click any row and highlight it
+
+function select_row() 
 {
-	$("#menuTable tbody tr[id]").click(function ()
+	$("#bookList tbody tr[id]").click(function () //allows us to click any row
 	{
 		$(".selected").removeClass("selected");
-		$(this).addClass("selected");
-		var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
-		var entree = $(this).attr("id") - 1;
+		$(this).addClass("selected"); //highlights the item
+		var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1; //grabs the section of the selected row
+		var entree = $(this).attr("id") - 1; //grabs the entree by the id attribute
 		delete_row(section, entree);
 	})
 };
 
 function delete_row(sec, ent)
 {
-	$("#delete").click(function ()
+	$("#delete").click(function () // the deletion is only triggered on the click of the delete button.
 	{
 		$.ajax(
 		{
