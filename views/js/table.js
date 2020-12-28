@@ -31,13 +31,13 @@ function select_row()
 	{
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected"); //highlights the item
-		var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1; //grabs the section of the selected row
-		var entree = $(this).attr("id") - 1; //grabs the entree by the id attribute
-		delete_row(section, entree);
+		var section = $(this).prevAll("tr").children("td[colspan='8']").length - 1; //grabs the section of the selected row
+		var book = $(this).attr("id") - 1; //grabs the book by the id attribute
+		delete_row(section, book);
 	})
 };
 
-function delete_row(sec, ent)
+function delete_row(sec, book)
 {
 	$("#delete").click(function () // the deletion is only triggered on the click of the delete button.
 	{
@@ -48,7 +48,7 @@ function delete_row(sec, ent)
 			data:
 			{
 				section: sec,
-				entree: ent
+				book: book
 			},
 			cache: false,
 			success: setTimeout(draw_table, 1000)
