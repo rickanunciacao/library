@@ -57,7 +57,7 @@
 
             
             <div class="col-lg-4">
-                <form enctype="application/json" action="/post/json" method="post">
+                <form enctype="application/json" action="/post/json" method="post" novalidate class="needs-validation">
                     <div class="form-group">
                         <select class="form-control" name="sec_n">
                             <option value="0">Technology</option>
@@ -65,16 +65,16 @@
                             <option value="2">+1</option>
                             <option value="3">+2</option>
                         </select>
-                        <input type="checkbox" id="isnew" name="isnew" value="yes">
+                        <input type="checkbox" id="isnew" name="isnew" value="true">
                         <label for="isnew"> Check for a New Book</label><br>
                         
-                        <input class="form-control mt-3" type="text" name="title" placeholder="Title">
-                        <input class="form-control mt-3" type="text" name="author" placeholder="Author">
-                        <input class="form-control mt-3" type="text" name="publishingYear" placeholder="Publishing Year">
-                        <input class="form-control mt-3" type="text" name="edition" placeholder="Edition">
-                        <input class="form-control mt-3" type="text" name="editorHouse" placeholder="Editor House">
-                        <input class="form-control mt-3" type="text" name="isbn" placeholder="ISBN">
-                        <input class="form-control mt-3" type="text" name="price" placeholder="Price">
+                        <input class="form-control mt-3" type="text" name="title" placeholder="Title" required>
+                        <input class="form-control mt-3" type="text" name="author" placeholder="Author" required>
+                        <input class="form-control mt-3" type="text" name="publishingYear" placeholder="Publishing Year" pattern='^\d{4}$' required>
+                        <input class="form-control mt-3" type="text" name="edition" placeholder="Edition" required>
+                        <input class="form-control mt-3" type="text" name="editorHouse" placeholder="Editor House" required>
+                        <input class="form-control mt-3" type="text" name="isbn" placeholder="ISBN" required>
+                        <input class="form-control mt-3" type="text" name="price" placeholder="Price" pattern='^\d+(?:\.\d{0,2})$' required>
                         
                         <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                     </div>
@@ -116,7 +116,7 @@
     <footer class="footer">
         <div class="container">
             
-            &copy; 2020
+            Henrique Anunciacao | rickanunciacao@gmail.com &copy; 2020
 
         </div>
 
