@@ -1,7 +1,7 @@
 
 // AJAX request to the endpoint "/get/html" and renders to the screen appending the html table into the div "#results" and triggers another function select_row().
 
-function draw_table()
+function draw_cat_table()
 {
 	$("#results").empty();
 	$.getJSONuncached = function (url)
@@ -18,7 +18,7 @@ function draw_table()
 			}
 		});
 	};
-	$.getJSONuncached("/get/books")
+	$.getJSONuncached("/get/categories")
 };
 
 
@@ -27,36 +27,34 @@ function draw_table()
 
 function select_row() 
 {
-	$("#bookList tbody tr[id]").click(function () //allows us to click any row
+	$("#categoryList tbody tr[id]").click(function () //allows us to click any row
 	{
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected"); //highlights the item
-		var section = $(this).prevAll("tr").children("td[colspan='8']").length - 1; //grabs the section of the selected row
-		var book = $(this).attr("id") - 1; //grabs the book by the id attribute
-		delete_row(section, book);
+		var cat = $(this).attr("id") - 1; //grabs the category by the id attribute
+		delete_row(cat);
 	})
 };
 
-function delete_row(sec, book)
+function delete_row(cat)
 {
 	$("#delete").click(function () // the deletion is only triggered on the click of the delete button.
 	{
 		$.ajax(
 		{
-			url: "/post/delete",
+			url: "/post/deletecat",
 			type: "POST",
 			data:
 			{
-				section: sec,
-				book: book
+				cat: cat
 			},
 			cache: false,
-			success: setTimeout(draw_table, 1000)
+			success: setTimeout(draw_cat_table, 1000)
 		})
 	})
 };
 
 $(document).ready(function ()
 {
-	draw_table();
+	draw_cat_table();
 });

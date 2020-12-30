@@ -37,7 +37,7 @@ router.get('/', function(req, res) {
 
 });
 
-router.get('/get/html', function(req, res) {
+router.get('/get/books', function(req, res) {
 
     res.writeHead(200, {'Content-Type': 'text/html'}); //We are responding to the client that the content served back is HTML and the it exists (code 200)
 
@@ -53,6 +53,26 @@ router.get('/get/html', function(req, res) {
 
 });
 
+
+
+router.get('/get/categories', function(req, res) {
+
+    res.writeHead(200, {'Content-Type': 'text/html'}); //We are responding to the client that the content served back is HTML and the it exists (code 200)
+
+    var xml = fs.readFileSync('categories.xml', 'utf8'); //We are reading in the XML file
+    var xsl = fs.readFileSync('categories.xsl', 'utf8'); //We are reading in the XSL file
+
+    var doc = xmlParse(xml); //Parsing our XML file
+    var stylesheet = xmlParse(xsl); //Parsing our XSL file
+
+    var result = xsltProcess(doc, stylesheet); //This does our XSL Transformation
+
+    res.end(result.toString()); //Send the result back to the user, but convert to type string first
+
+});
+
+
+
 router.post('/post/json', function (req, res) {
 
     function appendJSON(obj) {
@@ -64,6 +84,9 @@ router.post('/post/json', function (req, res) {
 
             
             result.home.section[obj.sec_n].book.push({'title': obj.title, 'author': obj.author, 'publishingYear': obj.publishingYear, 'edition': obj.edition, 'editorHouse': obj.editorHouse, 'isbn': obj.isbn, 'price': obj.price});
+            
+            
+            
             //result.home.section["Technology"].book.push({'title': obj.title, 'author': obj.author, 'publishingYear': obj.publishingYear, 'edition': obj.edition, 'editorHouse': obj.editorHouse, 'isbn': obj.isbn, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
@@ -104,6 +127,38 @@ router.post('/post/delete', function (req, res) {
     res.redirect('back');
 
 });
+
+
+
+
+
+router.post('/post/deletecat', function (req, res) {
+
+    function deleteJSON(obj) {
+
+        console.log(obj)
+
+        xmlFileToJs('categories.xml', function (err, result) {
+            if (err) throw (err);
+            
+            delete result.home.category.name[obj.cat];
+
+            console.log(JSON.stringify(result, null, "  "));
+
+            jsToXmlFile('categories.xml', result, function(err){
+                if (err) console.log(err);
+            });
+        });
+    };
+
+    deleteJSON(req.body);
+
+    res.redirect('back');
+
+});
+
+
+
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
     var addr = server.address();

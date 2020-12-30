@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<home>
+  <category>
+      <name>Technology</name>
+  </category>
+  <category>
+      <name>Business</name>
+  </category>
+  <category>
+      <name>Science</name>
+  </category>
+  <category>
+      <name>Finance</name>
+  </category>
+</home>
