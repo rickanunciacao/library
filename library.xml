@@ -40,4 +40,26 @@
       <price>50.00</price>
     </book>
   </section>
+  <section category="Science">
+    <book>
+      <title>Brief Answers to the Big Questions</title>
+      <author>Stephen Hawking</author>
+      <publishingYear>2018</publishingYear>
+      <edition>1st Edition</edition>
+      <editorHouse>John Murray</editorHouse>
+      <isbn>978-1-473-69598-6</isbn>
+      <price>40.00</price>
+    </book>
+  </section>
+  <section category="Finance">
+    <book>
+      <title>A book about economy</title>
+      <author>John and Jane Doe</author>
+      <publishingYear>2018</publishingYear>
+      <edition>1st Edition</edition>
+      <editorHouse>Economy World</editorHouse>
+      <isbn>5484751484</isbn>
+      <price>70.00</price>
+    </book>
+  </section>
 </home>
