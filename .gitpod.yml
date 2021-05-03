@@ -1,5 +1,4 @@
 tasks:
-  - name: Link xml2js
+  - name: Initialization Commands
     command: npm link xml2js
-    name: Run App Json
     command: node app.js
