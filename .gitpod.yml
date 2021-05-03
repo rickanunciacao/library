@@ -1,7 +1,0 @@
-tasks:
-  - name: Install Module XML to Jason
-    command: npm install xml2js
-  - name: Link xlm2js
-    command: npm link xml2js
-  - name: Run Node
-    command: node app.js  
