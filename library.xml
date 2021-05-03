@@ -39,6 +39,15 @@
       <isbn>1239654782</isbn>
       <price>50.00</price>
     </book>
+    <book>
+      <title>Another Book</title>
+      <author>another author</author>
+      <publishingYear>2021</publishingYear>
+      <edition>2</edition>
+      <editorHouse>house</editorHouse>
+      <isbn>125478</isbn>
+      <price>20.31</price>
+    </book>
   </section>
   <section category="Science">
     <book>
@@ -50,6 +59,15 @@
       <isbn>978-1-473-69598-6</isbn>
       <price>40.00</price>
     </book>
+    <book>
+      <title>Test science book</title>
+      <author>author</author>
+      <publishingYear>2021</publishingYear>
+      <edition>1</edition>
+      <editorHouse>house</editorHouse>
+      <isbn>454545</isbn>
+      <price>21.32</price>
+    </book>
   </section>
   <section category="Finance">
     <book>
@@ -60,6 +78,15 @@
       <editorHouse>Economy World</editorHouse>
       <isbn>5484751484</isbn>
       <price>70.00</price>
+    </book>
+    <book>
+      <title>test finance book</title>
+      <author>author</author>
+      <publishingYear>2021</publishingYear>
+      <edition>2</edition>
+      <editorHouse>house</editorHouse>
+      <isbn>21145454</isbn>
+      <price>20.00</price>
     </book>
   </section>
 </home>
