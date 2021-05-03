@@ -4,8 +4,4 @@ tasks:
   - name: Link xlm2js
     command: npm link xml2js
   - name: Run Node
-    command: node app.js
-  - name: Running MongoDB
-    command: mkdir -p data && mongod --dbpath data
-  - name: Install NodeMon
-    command: npm i --save -g nodemon && npm start
+    command: node app.js  
