@@ -1,4 +1,3 @@
 tasks:
-  - name: Initialization Commands
-    command: npm link xml2js
+  - init: npm link xml2js
     command: node app.js
