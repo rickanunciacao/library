@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+/*
 
 // Routes for Item Control - In-class exercise.
 
@@ -34,5 +35,20 @@ router.post('/images', upload.single('image'), imageCtrl.uploadImage);
 router.get('/images', imageCtrl.getImages);
 router.get('/image/:id', imageCtrl.getImage);
 router.delete('/image/:id', imageCtrl.deleteImage);
+
+
+
+*/
+
+
+// Routes for Books Management
+
+const bookCtrl = require('./book-controller');
+
+router.post('/book',bookCtrl.createBook);
+router.get('/books',bookCtrl.getBooks);
+router.get('/book/:id',bookCtrl.getBook);
+router.delete('/book/:id',bookCtrl.deleteBook);
+router.put('/book/:id',bookCtrl.updateBook);
 
 module.exports = router;
