@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 var booksSchema = new mongoose.Schema({ 
     title: String,
     author: String,
-    publishingyear: { type: Number, min: 4, max: 4 },
-    edition: { type: Number, min: 1, max: 3 },
+    publishingyear: Number,
+    edition: String,
     editorhouse: String,
     isbn: String,
     price: Number,
